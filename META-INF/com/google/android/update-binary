@@ -491,7 +491,16 @@ ui_print "                TEMPEST                  ";
 ui_print "************RIDWAN ADI CAHYONO***********";
 ui_print "*****************************************";
 
+if [ -e /dev/block/bootdevice/by-name/boot ]; then
+	dd if=/dev/block/bootdevice/by-name/boot of=/sdcard/previous-boot.img
+	if [ $? -eq 0 ]; then
+		ui_print "Your previous boot image saved to /sdcard/previous-boot.img"
+		ui_print ""
+	fi
+fi
+
 ui_print "- Installing Rimuru Tempest...";
+
 CORE=$($BB grep -oE 'ak.*core.sh' anykernel.sh);
 [ -f tools/$CORE ] || $BB ln -s $AKHOME/tools/ak*-core.sh $AKHOME/tools/$CORE;
 PATH="$AKHOME/bin:$PATH" home=$AKHOME $BB ash anykernel.sh $2;
