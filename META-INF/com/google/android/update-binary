@@ -463,19 +463,16 @@ if [ -f banner ]; then
   ui_print " " " ";
 fi;
 
-ui_print "****************************************";
-ui_print "* $(file_getprop anykernel.sh kernel.string)";
+ui_print "**********************************";
 ui_print "Welcome To Jura Tempest Federation";
-ui_print "               Shuna              ";
 ui_print "           Oni Princess           ";
 ui_print "          Tempest Family          ";
-ui_print "****************************************";
+ui_print "**********************************";
 if [ -f version ]; then
   ui_print " ";
   ui_printfile version;
   ui_print " ";
 fi;
-ui_print "**********************************";
 ui_print " ";
 ui_print "SSSSSS S    S S    S SSSSSS SSSSSS";
 ui_print "S      S    S S    S S    S S    S";
