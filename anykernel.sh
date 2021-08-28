@@ -27,9 +27,9 @@ ramdisk_compression=auto;
 . tools/ak3-core.sh;
 
 ui_print "Welcome To Jura Tempest Federation"
-ui_print "         Shuna              "
-ui_print "*Oni Princess*"
-ui_print "Tempest Family"
+ui_print "               Shuna              "
+ui_print "           Oni Princess           "
+ui_print "          Tempest Family          "
 
 ## AnyKernel file attributes
 # set permissions/ownership for included ramdisk files
@@ -39,6 +39,19 @@ set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 
 ## AnyKernel boot install
 dump_boot;
+
+ui_print "*********************"
+ui_print " "
+ui_print "SSSSSS S    S S    S SSSSSS SSSSSS"
+ui_print "S      S    S S    S S    S S    S"
+ui_print "S      S    S S    S S    S S    S"
+ui_print "SSSSSS SSSSSS S    S S    S SSSSSS"
+ui_print "     S S    S S    S S    S S    S"
+ui_print "     S S    S S    S S    S S    S"
+ui_print "SSSSSS S    S SSSSSS S    S S    S"
+ui_print "             TEMPEST              "
+ui_print "************ ItoRenz *************"
+ui_print "*******************"
 
 write_boot;
 ## end boot install
