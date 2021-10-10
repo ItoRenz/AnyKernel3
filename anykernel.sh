@@ -9,11 +9,7 @@ do.modules=0
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=mi8937
-device.name2=msm8937
-device.name3=rolex
-device.name4=riva
-device.name5=rova
+device.name1=rolex
 supported.versions=
 supported.patchlevels=
 '; } # end properties
