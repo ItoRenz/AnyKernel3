@@ -479,13 +479,14 @@ if [ -f version ]; then
 fi;
 
 ui_print " ";
-ui_print "SSSSSSS S SSSSSSS S     S SSSSSSS S     S";
-ui_print "S     S S S  S  S S     S S     S S     S";
-ui_print "S     S S S  S  S S     S S     S S     S";
-ui_print "SSSSSSS S S  S  S S     S SSSSSSS S     S";
-ui_print "S S     S S  S  S S     S S S     S     S";
-ui_print "S   S   S S  S  S S     S S   S   S     S";
-ui_print "S     S S S  S  S SSSSSSS S     S SSSSSSS";
+ui_print "*****************************************";
+ui_print "RRRRRRR R RRRRRRR R     R RRRRRRR R     R";
+ui_print "R     R R R  R  R R     R R     R R     R";
+ui_print "R     R R R  R  R R     R R     R R     R";
+ui_print "RRRRRRR R R  R  R R     R RRRRRRR R     R";
+ui_print "R R     R R  R  R R     R R R     R     R";
+ui_print "R   R   R R  R  R R     R R   R   R     R";
+ui_print "R     R R R  R  R RRRRRRR R     R RRRRRRR";
 ui_print "                TEMPEST                  ";
 ui_print "************RIDWAN ADI CAHYONO***********";
 ui_print "*****************************************";
