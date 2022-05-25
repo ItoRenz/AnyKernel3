@@ -43,23 +43,25 @@ set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 ## AnyKernel boot install
 dump_boot;
 
+patch_cmdline androidboot.usbconfigfs androidboot.usbconfigfs=true
+
 write_boot;
 ## end boot install
 
+# Check for 4.9 support
+umount /vendor
+mount -o ro /dev/block/bootdevice/by-name/cust /vendor
+if [ -f /vendor/build.prop ]; then
+	if [ -f /vendor/etc/vintf/manifest.xml ] ; then
+		grep "target-level=\"2\"" /vendor/etc/vintf/manifest.xml
+	elif [ -f /vendor/manifest.xml ] ; then
+		grep "target-level=\"2\"" /vendor/manifest.xml
+	else
+		false
+	fi
 
-# shell variables
-#block=vendor_boot;
-#is_slot_device=1;
-#ramdisk_compression=auto;
-#patch_vbmeta_flag=auto;
-
-# reset for vendor_boot patching
-#reset_ak;
-
-
-## AnyKernel vendor_boot install
-#split_boot; # skip unpack/repack ramdisk since we don't need vendor_ramdisk access
-
-#flash_boot;
-## end vendor_boot install
-
+	if [ $? -eq 0 ]; then
+		ui_print "WARNING: Your vendor doesn't seems like supporting kernel 4.9."
+	fi
+fi
+umount /vendor
