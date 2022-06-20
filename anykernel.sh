@@ -19,7 +19,7 @@ device.name7=prada
 device.name8=ugglite
 device.name9=ugg
 device.name10=tiare
-supported.versions= 10 - 12.1
+supported.versions=
 supported.patchlevels=
 '; } # end properties
 
